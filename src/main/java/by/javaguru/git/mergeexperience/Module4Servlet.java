@@ -24,7 +24,7 @@ public class Module4Servlet extends HttpServlet {
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
         out.println("<span>");
-        out.println("<a href='"+request.getContextPath()+"/module3"+"'/><-Предыдущий модуль</a>");
+        out.println("<a href='"+getServletContext().getContextPath()+"/module3"+"'/><-Предыдущий модуль</a>");
         out.println("</span>");
 
         out.println("</body></html>");

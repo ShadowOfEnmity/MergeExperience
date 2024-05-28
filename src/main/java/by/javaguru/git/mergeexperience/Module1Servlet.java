@@ -31,8 +31,8 @@ public class Module1Servlet extends HttpServlet {
                     + "</td></tr>");
 
         out.println("</table>");
-        out.println("<span>");
-        out.println("<a href='"+request.getContextPath()+"/module2"+"'/>Последующий модуль-></a>");
+        out.println("<span style='padding-left: 25%;'>");
+        out.println("<a href='"+getServletContext().getContextPath()+"/module2"+"'/><img src='"+getServletContext().getContextPath()+"/resources/images/arrow_next_right.png' alt='arrow next' width='50' height='40'></a>");
         out.println("</span>");
         out.println("</body></html>");
     }

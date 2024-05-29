@@ -3,6 +3,7 @@ package by.javaguru.git.mergeexperience;
 import java.io.*;
 
 import by.javaguru.git.mergeexperience.topics.Module1Topics;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -27,13 +28,16 @@ public class Module1Servlet extends HttpServlet {
                     + value.getOrder() + "</td><td>"
                     + value.getTopic() + "</td><td>"
                     + value.getDesc()
-                    + "</td><td><a href=''>Подробнее</a>"
+                    + "</td><td>" +
+//                    "<form action=\""+getServletContext().getContextPath()+"/description/?order="+value.getOrder()+"\" method=\"get\" ><><input type=\"button\" value=\"Подробнее\"></form>"
+                    "<a href='"+getServletContext().getContextPath()+"/description/?module=1&order="+value.getOrder()+"'>Подробнее</a>"
                     + "</td></tr>");
 
         out.println("</table>");
 
         out.println("</body></html>");
     }
+
 
     public void destroy() {
     }

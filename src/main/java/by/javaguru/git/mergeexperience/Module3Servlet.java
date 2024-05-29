@@ -20,7 +20,6 @@ public class Module3Servlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
@@ -31,7 +30,8 @@ public class Module3Servlet extends HttpServlet {
                     + value.getOrder() + "</td><td>"
                     + value.getTopic() + "</td><td>"
                     + value.getDesc()
-                    + "</td><td><a href=''>Подробнее</a>"
+                    + "</td><td>"
+                    +"<a href='"+getServletContext().getContextPath()+"/description/?module=3&order="+value.getOrder()+"'>Подробнее</a>"
                     + "</td></tr>");
 
         out.println("</table>");

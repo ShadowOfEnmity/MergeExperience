@@ -28,9 +28,8 @@ public class Module1Servlet extends HttpServlet {
                     + value.getOrder() + "</td><td>"
                     + value.getTopic() + "</td><td>"
                     + value.getDesc()
-                    + "</td><td>" +
-//                    "<form action=\""+getServletContext().getContextPath()+"/description/?order="+value.getOrder()+"\" method=\"get\" ><><input type=\"button\" value=\"Подробнее\"></form>"
-                    "<a href='"+getServletContext().getContextPath()+"/description/?module=1&order="+value.getOrder()+"'>Подробнее</a>"
+                    + "</td><td>"
+                    + "<a href='"+getServletContext().getContextPath()+"/description/?module=1&order="+value.getOrder()+"'>Подробнее</a>"
                     + "</td></tr>");
 
         out.println("</table>");
